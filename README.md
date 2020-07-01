@@ -4,7 +4,7 @@
 ## Neste repositório abordamos os segintes tópicos:
 
 - H1 na mesma página
-- 
+- Atributos lang e alt
 - 
 - 
 - 
@@ -24,6 +24,24 @@ Contudo, isso pode prejudicar a acessibilidade do site pois podem ler apenas o p
 >Tomar cuidado com a marcação de conteúdo quando estamos utilizando elementos HTML5. Vale mais por uma 'div' do que usar um 'aside' ou 'details' erroneamente. 
 
 
+### Atributos leang e alt
+Podemos evitar sotaques com atributo lang e o atributo alt se refere a "texto alternativo" vinculado a imagens.  
+É útil não apenas para usuários de leitor de tela, mas também se por algum motivo a imagem não for carregada na página. 
+Com o apoio de texto, criamos uma experiência melhor na interface.
+
+```
+<html lang="pt-br">
+<img src="img/android.png" alt="Android">
+<a href="#" class="cabecalho-logo" title="Logotipo da Apeperia">
+```
+>OBS.: Utilizar o lang de forma correta, evitando sotaques para o ouvinte, caso tenha um fraguimento em outro idioma colocar o atributo lang na 'div'.
+>Importante separar as responsabilidades entre o que é visual e o que é conteúdo. 
+>Iconografia normalmente tem caráter visual, e o que for visual utilizar CSS, seja usando um background-image ou um ::after/::before.
+>Se for interessante que a imagem seja indexada por buscadores, a imagem deve ser deixada no HTML. Porém, o alt ainda precisa ser declarado, mesmo que sem valor, para que o leitor de tela ignore a imagem.
+>Os leitores de tela lêem a desc dos SVGs, isso usando o mouse, é recomendável adicionar unm title no 'a' do arquivo svg e deixar a desc quando necessário.
+
+
+
 ### Links de Apoio
 
 | Link | Descrição |
@@ -34,9 +52,10 @@ Contudo, isso pode prejudicar a acessibilidade do site pois podem ler apenas o p
 | [WebAIM](https://webaim.org/) | Site focado em acessibilidade web |
 |[Palestra da Marina Domingues](https://pt.slideshare.net/MarinaDomingues7/acessibilidade-por-que-deixarmos-de-ser-amadores-para-um-pblico-que-espera-mais-de-ns)  |[Slides] Acessibilidade e números  |
 |[Estudo Inclusivo](http://www.estudoinclusivo.com.br/) |Estudo Brasileiro sobre o uso de leitores de tela |
+|[Palestra](https://www.youtube.com/watch?v=5FJJuEVt5sA)  |Lang e Alt - Reinaldo Ferraz  |
+|[Blog](http://www.reinaldoferraz.com.br/acessibilidade-seo-e-svg/)  | Acessibilidade, SEO e SVG - Reinaldo Ferraz |
 |  |  |
 |  |  |
-
 
 
 
