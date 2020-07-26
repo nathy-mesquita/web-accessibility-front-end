@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/rodape.css">
   <link rel="stylesheet" href="css/dialogNewsletter.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width" />
 </head>
 
 <body>
@@ -365,13 +365,13 @@
           </p>
 
           <div class="contatoCampo contatoCampo--sucesso">
-            <label>Nome: </label>
-            <input type="text" class="contatoCampo--validouFoi" value="Natan Souza" required>
+            <label for="nome">Nome: </label>
+            <input type="text" class="contatoCampo--validouFoi" id="nome" placeholder="Nome..." required>
           </div>
 
           <div class="contatoCampo contatoCampo--erro">
-            <label>Email: </label>
-            <input type="email" class="contatoCampo--validouErro" required>
+            <label for="email">Email: </label>
+            <input type="email" class="contatoCampo--validouErro" id="email" placeholder="Email..." required>
             <span class="contatoCampo-msg contatoCampo-msg--erro">
               Você quis dizer <a href="#">gmail.com?</a>
             </span>
@@ -390,22 +390,22 @@
 
           <div class="contatoCampo">
             <label>Endereço: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Rua Vergueiro">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Avenida Rio Branco">
           </div>
 
           <div class="contatoCampo">
             <label>Bairro: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="Vila Mariana">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Centro">
           </div>
 
           <div class="contatoCampo">
             <label>Cidade: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="São Paulo">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rio de Janeiro">
           </div>
 
           <div class="contatoCampo">
             <label>Estado: </label>
-            <input type="text" class="contatoCampo-campoDesabilitado" disabled value="SP">
+            <input type="text" class="contatoCampo-campoDesabilitado" readonly value="RJ">
           </div>
 
           <div class="contatoCampo">
@@ -453,7 +453,8 @@
           </p>
         </div>
 
-        <video src="img/formacao-java.mp4" class="secaoInstitucional-video">
+        <video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls>
+          <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português (Brasil)">
         </video>
 
       </div>

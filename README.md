@@ -7,7 +7,7 @@
 - Atributos lang e alt
 - CSS interfere no leitor de tela? Listas e display: none
 - Roles e arias
-- 
+- Formulário acessível
 
 ### H1 na mesma página
 Atualmente é aceitável, semanticamente, uma página de um site possuir diversos 'h1' distribuídos em seções independentes.
@@ -90,6 +90,34 @@ Através da WAI-ARIA podemos mudar o modo de relacionar o link com a < figpcatio
 >ou podemos atribuir uma role (escopo) em uma div como principal, dizendo que é um main, ou seja mudar a semântica de um elemento.
 >Podemos usar html descritivo fazendo uso de "figure" e "figcaption" ao usar apenas "div" e "p", pois facilita a interpretação dos leitores de tela. Além disso utilizamos o 
 >aria-labelledby="tituloDestaque1" (rotulado por) Atributo para adicionar semântica ao HTML e referênciar o link ao título do conteúdo e assim não repitir o "alt".
+
+### Formulário acessível
+Sempre devemos usar devidamente uma < label> para cada campo em um formulário. Lembrando de atrelá-los com os atributos for e id, pois o usuário ao sair do campo depois de preencher algo, quando volta, precisa lembrar do que se tratava o campo quando utilizamos apenas o placeholder.
+Importante não bloquearmos o zoom quando o usuário estiver acessando pelo celular.
+Utilizaremos os "controls" padrão do navegador.
+
+```
+<div>
+    <label for="nome">Nome: </label>
+    <input type="text" class="contatoCampo--validouFoi" id="nome" placeholder="Nome..." required>
+</div>
+
+<input type="text" class="contatoCampo-campoDesabilitado" readonly value="Rua Vergueiro">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<video src="img/formacao-java.mp4" class="secaoInstitucional-video" controls>
+    <track src="img/legenda-portugues-brasil.vtt" kind="subtitles" srclang="pt-br" label="Português (Brasil)">
+</video>
+
+```
+>Embora placeholder seja interessante, o ideal é utilizarmos a estrutura "for" na label e "id" no input, pois dessa forma o leitor de tela irá iterpretar que tipo de campo está se referindo sem precisar apagar tudo para ler o placeholder.
+>Em capos que poderão ser completados automaticamente com o cep, por exemplo, tomar cuidado ao utilizar o atributo "disabled", pois os leitores de tela não reconhecem campos com esse atributo.
+>Sendo assim, se quisermos que o campo fique para apenas leitura, podemos utilizar o atributo "readonly".
+>Esses atributos content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" não deerão ser utilizados pois fere a liberdade do usuário ao dar Zoom através do celular.
+>Quando se trata de vídeo, podemos utilizar os controles do HTML5 "controls"
+>Para adicionarmos legenda ao vídeo, é simples! utilizaremos o arquivo de extensão .vtt e incluiremos os controles com  < track>
+
 
 ### Links de Apoio
 
