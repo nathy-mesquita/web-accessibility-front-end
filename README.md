@@ -6,7 +6,7 @@
 - H1 na mesma página
 - Atributos lang e alt
 - CSS interfere no leitor de tela? Listas e display: none
-- 
+- Roles e arias
 - 
 
 ### H1 na mesma página
@@ -62,20 +62,53 @@ Quando queremos deixar nossa página mais acessível, devemos nos preocupar em t
 >OBS.: CSS também infuencia nos leitores de tela como é o exemplo do trecho de código assima. Onde o atribuito disc esta sendo lido como "bolinha".
 >display: none;| visibility: hidden; - Devemos ter cuidado com essa declaração pois apesar de ser prática, pode inviabilizar o acesso para usuários de leitores de tela.
 
+### Roles e arias
+Fizemos um link âncora para uma tag < h1 >, que é o conteúdo principal ou resumo do site.
+E o atributo role que serve para atribuir papeis aos elementos no nosso código, por exemplo, se queremos que uma < div > seja interpretada como um botão pelo leitor de tela, escreveremos role="button".
+Através da WAI-ARIA podemos mudar o modo de relacionar o link com a < figpcation >, ou seja, que a legenda funcione como rótulo do link.
+
+```
+<a href="#conteudoPrincipal" class="pularNavegacao">Pular para conteúdo principal</a>
+ <h1 class="secaoDestaque-titulo" id="conteudoPrincipal">
+        APLICATIVOS NA MEDIDA
+      </h1>
+<main class="conteudo" role="main">
+
+
+<a href="http://blog.apeperia.com.br/design/conheca-primeiras-etapas-criacao-logotipo-teste-teste"
+          class="secaoDestaques-link" aria-labelledby="tituloDestaque1">
+    <figure class="secaoDestaques-destaque">
+        <img src="img/comecando-criar-logotipo.png" class="secaoDestaques-destaque-img"
+        alt="Ferramentas de Design. Ilustração">
+            <figcaption class="secaoDestaques-destaque-titulo" id="tituloDestaque1">
+              Conheça as primeiras etapas na criação de um logotipo
+            </figcaption>
+    </figure>
+</a>
+```
+>Para facilitar o direcionamento dos leitores de tela para o conteúdo principal podemos fazer de duas maneiras, utilizando um link < a > e o referenciando pelo ID na tag desejada 
+>ou podemos atribuir uma role (escopo) em uma div como principal, dizendo que é um main, ou seja mudar a semântica de um elemento.
+>Podemos usar html descritivo fazendo uso de "figure" e "figcaption" ao usar apenas "div" e "p", pois facilita a interpretação dos leitores de tela. Além disso utilizamos o 
+>aria-labelledby="tituloDestaque1" (rotulado por) Atributo para adicionar semântica ao HTML e referênciar o link ao título do conteúdo e assim não repitir o "alt".
+
 ### Links de Apoio
 
 | Link | Descrição |
 | ------ | ------ |
-|  [NVDA](https://www.nvaccess.org/) | Leitor  de tela mais utilizado |
-| [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) | Leitor de tela |
-| [VoiceOver](https://www.apple.com/br/accessibility/mac/vision/) |Leitor de tela  para Mac |
-| [WebAIM](https://webaim.org/) | Site focado em acessibilidade web |
+|[NVDA](https://www.nvaccess.org/) |Leitor  de tela mais utilizado |
+|[JAWS](https://www.freedomscientific.com/Products/software/JAWS/) |Leitor de tela |
+|[VoiceOver](https://www.apple.com/br/accessibility/mac/vision/) |Leitor de tela  para Mac |
+|[WebAIM](https://webaim.org/) |Site focado em acessibilidade web |
 |[Palestra da Marina Domingues](https://pt.slideshare.net/MarinaDomingues7/acessibilidade-por-que-deixarmos-de-ser-amadores-para-um-pblico-que-espera-mais-de-ns)  |[Slides] Acessibilidade e números  |
 |[Estudo Inclusivo](http://www.estudoinclusivo.com.br/) |Estudo Brasileiro sobre o uso de leitores de tela |
 |[Palestra](https://www.youtube.com/watch?v=5FJJuEVt5sA)  |Lang e Alt - Reinaldo Ferraz  |
 |[Blog](http://www.reinaldoferraz.com.br/acessibilidade-seo-e-svg/)  |Acessibilidade, SEO e SVG - Reinaldo Ferraz |
 |[CSS in Action](https://webaim.org/techniques/css/invisiblecontent/)  |Invisible Content Just for Screen Reader Users  |
 |[Atalhos NVDA](https://webaim.org/resources/shortcuts/nvda)  |Keyboard Shortcuts for NVDA  |
+|[Palestra da Vanessa Me Tonini](https://www.youtube.com/watch?v=l_NBdzqYm44)  |WAI-ARIA: Acessibilidade em tempo real  |
+|[WAI ARIA basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#What_is_WAI-ARIA)  |Documentação WAI ARIA|
+|[The Roles Model](https://www.w3.org/WAI/PF/aria/roles)  |Lista com Roles Existentes  |
+|[Basic screen reader commands for accessibility testing](https://developer.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/)  |Atalhos básicos de leitores de tela para testes de acessibilidade (inglês)  |
 |  |  |
 |  |  |
 
