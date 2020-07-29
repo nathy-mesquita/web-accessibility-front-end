@@ -137,9 +137,12 @@ Utilizaremos os "controls" padrão do navegador.
 |[WAI ARIA basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#What_is_WAI-ARIA)  |Documentação WAI ARIA|
 |[The Roles Model](https://www.w3.org/WAI/PF/aria/roles)  |Lista com Roles Existentes  |
 |[Basic screen reader commands for accessibility testing](https://developer.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/)  |Atalhos básicos de leitores de tela para testes de acessibilidade (inglês)  |
-|  |  |
-|  |  |
+|[Accessible multimedia](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia#Creating_custom_audio_)  |Criando controles personalizados de áudio e vídeo  |
+|[Hand Talk](https://www.handtalk.me/br)  |PLUGIN DE TRADUÇÃO PARA LIBRAS |
 
+
+
+## Acessibilidade não é caridade, é empatia.
 
 
 License
